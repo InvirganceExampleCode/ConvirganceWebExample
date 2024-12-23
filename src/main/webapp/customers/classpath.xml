@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+          http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
+    ">
+    <bean class="com.invirgance.convirgance.web.service.SelectService">
+        <property name="parameters">
+            <list>
+                <bean class="com.invirgance.convirgance.web.parameter.RequestParameter">
+                    <property name="name" value="zipcode" />
+                    <property name="defaultValue" value="" />
+                </bean>
+                <bean class="com.invirgance.convirgance.web.parameter.RequestParameter">
+                    <property name="name" value="state" />
+                    <property name="defaultValue" value="" />
+                </bean>
+                <bean class="com.invirgance.convirgance.web.parameter.RequestParameter">
+                    <property name="name" value="discountCode" />
+                    <property name="defaultValue" value="" />
+                </bean>
+            </list>
+        </property>
+        <property name="binding">
+            <bean class="com.invirgance.convirgance.web.binding.ClasspathInputBinding">
+                <property name="path" value="/data/customers.json" />
+                <property name="input">
+                    <bean class="com.invirgance.convirgance.input.JSONInput" />
+                </property>
+            </bean>
+        </property>
+        <property name="transformers">
+            <list>
+                <bean class="com.invirgance.convirgance.transform.filter.AndFilter">
+                    <property name="filters">
+                        <list>
+                            <bean class="com.invirgance.convirgance.transform.filter.OrFilter">
+                                <property name="filters">
+                                    <list>
+                                        <!-- This filter makes all values return if discountCode is not set-->
+                                        <bean class="com.invirgance.convirgance.web.service.BindingFilter">
+                                            <property name="filter">
+                                                <bean class="com.invirgance.convirgance.transform.filter.EqualsFilter">
+                                                    <property name="key" value="zipcode" />
+                                                    <property name="value" value="" />
+                                                </bean>
+                                            </property>
+                                        </bean>
+                                        <bean class="com.invirgance.convirgance.transform.filter.EqualsFilter">
+                                            <property name="key" value="ZIP" />
+                                            <property name="value">
+                                                <bean class="com.invirgance.convirgance.web.service.BindingParameter">
+                                                    <property name="key" value="zipcode" />
+                                                </bean>
+                                            </property>
+                                        </bean>
+                                    </list>
+                                </property>
+                            </bean>
+                            <bean class="com.invirgance.convirgance.transform.filter.OrFilter">
+                                <property name="filters">
+                                    <list>
+                                        <!-- This filter makes all values return if discountCode is not set-->
+                                        <bean class="com.invirgance.convirgance.web.service.BindingFilter">
+                                            <property name="filter">
+                                                <bean class="com.invirgance.convirgance.transform.filter.EqualsFilter">
+                                                    <property name="key" value="state" />
+                                                    <property name="value" value="" />
+                                                </bean>
+                                            </property>
+                                        </bean>
+                                        <bean class="com.invirgance.convirgance.transform.filter.EqualsFilter">
+                                            <property name="key" value="STATE" />
+                                            <property name="value">
+                                                <bean class="com.invirgance.convirgance.web.service.BindingParameter">
+                                                    <property name="key" value="state" />
+                                                </bean>
+                                            </property>
+                                        </bean>
+                                    </list>
+                                </property>
+                            </bean>
+                            <bean class="com.invirgance.convirgance.transform.filter.OrFilter">
+                                <property name="filters">
+                                    <list>
+                                        <!-- This filter makes all values return if discountCode is not set-->
+                                        <bean class="com.invirgance.convirgance.web.service.BindingFilter">
+                                            <property name="filter">
+                                                <bean class="com.invirgance.convirgance.transform.filter.EqualsFilter">
+                                                    <property name="key" value="discountCode" />
+                                                    <property name="value" value="" />
+                                                </bean>
+                                            </property>
+                                        </bean>
+                                        <bean class="com.invirgance.convirgance.transform.filter.EqualsFilter">
+                                            <property name="key" value="DISCOUNT_CODE" />
+                                            <property name="value">
+                                                <bean class="com.invirgance.convirgance.web.service.BindingParameter">
+                                                    <property name="key" value="discountCode" />
+                                                </bean>
+                                            </property>
+                                        </bean>
+                                    </list>
+                                </property>
+                            </bean>
+                        </list>
+                    </property>
+                </bean>
+            </list>
+        </property>
+        <property name="output">
+            <bean class="com.invirgance.convirgance.output.JSONOutput" />
+        </property>
+    </bean>
+</beans>
