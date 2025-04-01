@@ -9,7 +9,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>ServicesServlet</servlet-name>
-        <url-pattern>/</url-pattern>
+        <url-pattern>/customers</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
