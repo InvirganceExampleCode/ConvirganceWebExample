@@ -63,6 +63,7 @@
                     <th align="left">Address 2</th>
                     <th align="left">City</th>
                     <th align="left">State</th>
+                    <th align="left">Zip Code</th>
                     <th align="left">Credit Limit</th>
                     <th align="left">Discount Code</th>
                 </tr>
@@ -75,12 +76,14 @@
                     <td>${customer.ADDRESSLINE1}</td>
                     <td>${customer.ADDRESSLINE2}</td>
                     <td>${customer.CITY}</td>
-                    <td>${customer.STATE}</td>
+                    <td><a href="?state=${customer.STATE}">${customer.STATE}</a></td>
+                    <td><a href="?zipcode=${customer.ZIP}">${customer.ZIP}</a></td>
                     <td>${customer.CREDIT_LIMIT}</td>
-                    <td>${customer.DISCOUNT_CODE}</td>
+                    <td><a href="?discountCode=${customer.DISCOUNT_CODE}">${customer.DISCOUNT_CODE}</a></td>
                 </tr>
             </virge:iterate>
             </tbody>
         </table>
+        <div><a href="?">Show All Records</a></div>
     </body>
 </html>
