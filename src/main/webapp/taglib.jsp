@@ -2,27 +2,7 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@taglib uri="convirgance:web" prefix="virge" %>
 <!DOCTYPE html>
-<virge:json var="list" scope="page">
-[
-    { "title": "First Name", "key": "firstName" },
-    { "title": "Last Name", "key": "lastName" },
-    { "title": "Address", "key": "address" },
-    { "title": "City", "key": "city"}
-]
-</virge:json>
 
-<virge:object var="binding">
-    <virge:key name="zipcode" value="${param.zipcode}" default="" />
-    <virge:key name="state" value="${param.state}" default="" />
-    <virge:key name="discountCode" value="${param.discountCode}" default="" />
-</virge:object>
-
-<virge:query var="customers" jndi="jdbc/sample" binding="${binding}">
-select * from APP.CUSTOMER
-where (:zipcode = '' or ZIP = :zipcode)
-and (:state = '' or STATE = :state)
-and (:discountCode = '' or DISCOUNT_CODE = :discountCode)
-</virge:query>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -30,6 +10,14 @@ and (:discountCode = '' or DISCOUNT_CODE = :discountCode)
     </head>
     <body>
         <h1>Inline JSON</h1>
+        <virge:json var="list" scope="page">
+        [
+            { "title": "First Name", "key": "firstName" },
+            { "title": "Last Name", "key": "lastName" },
+            { "title": "Address", "key": "address" },
+            { "title": "City", "key": "city"}
+        ]
+        </virge:json>
         <table border="1" cellpadding="8">
             <thead>
                 <tr>
@@ -37,21 +25,35 @@ and (:discountCode = '' or DISCOUNT_CODE = :discountCode)
                     <th align="left">Key</th>
                     <th align="left">JSON</th>
                     <th align="left">Rendered</th>
+                    <th align="left">Status</th>
                 </tr>
             </thead>
             <tbody>
-            <c:forEach var="item" items="${list}">
+            <virge:iterate var="item" items="${list}" status="loop">
                 <tr>
                     <td>${item.title}</td>
                     <td>${item.key}</td>
                     <td>${item}</td>
                     <td>${item.title}: <input type="text" id="${item.key}" name="${item.key}"></td>
+                    <td>${loop.index}: ${loop}</td>
                 </tr>
-            </c:forEach>
+            </virge:iterate>
             </tbody>
         </table>
         <br><br>
         <h1>Dynamic Query</h1>
+        <virge:object var="binding">
+            <virge:key name="zipcode" value="${param.zipcode}" default="" />
+            <virge:key name="state" value="${param.state}" default="" />
+            <virge:key name="discountCode" value="${param.discountCode}" default="" />
+        </virge:object>
+
+        <virge:query var="customers" jndi="jdbc/sample" binding="${binding}">
+        select * from APP.CUSTOMER
+        where (:zipcode = '' or ZIP = :zipcode)
+        and (:state = '' or STATE = :state)
+        and (:discountCode = '' or DISCOUNT_CODE = :discountCode)
+        </virge:query>
         <table border="1" cellpadding="8">
             <thead>
                 <tr>
@@ -66,7 +68,7 @@ and (:discountCode = '' or DISCOUNT_CODE = :discountCode)
                 </tr>
             </thead>
             <tbody>
-            <c:forEach var="customer" items="${customers.iterator()}">
+            <virge:iterate var="customer" items="${customers}">
                 <tr>
                     <td>${customer.CUSTOMER_ID}</td>
                     <td>${customer.NAME}</td>
@@ -77,7 +79,7 @@ and (:discountCode = '' or DISCOUNT_CODE = :discountCode)
                     <td>${customer.CREDIT_LIMIT}</td>
                     <td>${customer.DISCOUNT_CODE}</td>
                 </tr>
-            </c:forEach> 
+            </virge:iterate>
             </tbody>
         </table>
     </body>
