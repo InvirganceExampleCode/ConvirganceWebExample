@@ -84,6 +84,8 @@
             </virge:iterate>
             </tbody>
         </table>
-        <div><a href="?">Show All Records</a></div>
+        <div style="margin: 4px;">
+            <a href="?">Show All Records</a>
+        </div>
     </body>
 </html>
