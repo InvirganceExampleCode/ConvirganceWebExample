@@ -40,7 +40,7 @@
             </tbody>
         </table>
         <br><br>
-        <h1>Dynamic Query</h1>
+        <h1>SQL Query</h1>
         <virge:object var="binding">
             <virge:key name="zipcode" value="${param.zipcode}" default="" />
             <virge:key name="state" value="${param.state}" default="" />
@@ -53,6 +53,46 @@
         and (:state = '' or STATE = :state)
         and (:discountCode = '' or DISCOUNT_CODE = :discountCode)
         </virge:query>
+        <table border="1" cellpadding="8">
+            <thead>
+                <tr>
+                    <th align="left">ID</th>
+                    <th align="left">Name</th>
+                    <th align="left">Address 1</th>
+                    <th align="left">Address 2</th>
+                    <th align="left">City</th>
+                    <th align="left">State</th>
+                    <th align="left">Zip Code</th>
+                    <th align="left">Credit Limit</th>
+                    <th align="left">Discount Code</th>
+                </tr>
+            </thead>
+            <tbody>
+            <virge:iterate var="customer" items="${customers}">
+                <tr>
+                    <td>${customer.CUSTOMER_ID}</td>
+                    <td>${customer.NAME}</td>
+                    <td>${customer.ADDRESSLINE1}</td>
+                    <td>${customer.ADDRESSLINE2}</td>
+                    <td>${customer.CITY}</td>
+                    <td><a href="?state=${customer.STATE}">${customer.STATE}</a></td>
+                    <td><a href="?zipcode=${customer.ZIP}">${customer.ZIP}</a></td>
+                    <td>${customer.CREDIT_LIMIT}</td>
+                    <td><a href="?discountCode=${customer.DISCOUNT_CODE}">${customer.DISCOUNT_CODE}</a></td>
+                </tr>
+            </virge:iterate>
+            </tbody>
+        </table>
+        <div style="margin: 4px;">
+            <a href="?">Show All Records</a>
+        </div>
+        <br><br>
+        <h1>Service Call</h1>
+        <virge:service var="customers" path="/customers/database">
+            <virge:parameter name="zipcode" value="${param.zipcode}" default="" />
+            <virge:parameter name="state" value="${param.state}" default="" />
+            <virge:parameter name="discountCode" value="${param.discountCode}" default="" />
+        </virge:service>
         <table border="1" cellpadding="8">
             <thead>
                 <tr>
