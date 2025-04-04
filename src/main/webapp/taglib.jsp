@@ -70,15 +70,15 @@
             <tbody>
             <virge:iterate var="customer" items="${customers}">
                 <tr>
-                    <td>${customer.CUSTOMER_ID}</td>
-                    <td>${customer.NAME}</td>
-                    <td>${customer.ADDRESSLINE1}</td>
-                    <td>${customer.ADDRESSLINE2}</td>
-                    <td>${customer.CITY}</td>
-                    <td><a href="?state=${customer.STATE}">${customer.STATE}</a></td>
-                    <td><a href="?zipcode=${customer.ZIP}">${customer.ZIP}</a></td>
-                    <td>${customer.CREDIT_LIMIT}</td>
-                    <td><a href="?discountCode=${customer.DISCOUNT_CODE}">${customer.DISCOUNT_CODE}</a></td>
+                    <td>${virge:html(customer.CUSTOMER_ID)}</td>
+                    <td>${virge:html(customer.NAME)}</td>
+                    <td>${virge:html(customer.ADDRESSLINE1)}</td>
+                    <td>${virge:html(customer.ADDRESSLINE2)}</td>
+                    <td>${virge:html(customer.CITY)}</td>
+                    <td><a href="?state=${virge:html(customer.STATE)}">${virge:html(customer.STATE)}</a></td>
+                    <td><a href="?zipcode=${virge:html(customer.ZIP)}">${virge:html(customer.ZIP)}</a></td>
+                    <td>${virge:html(customer.CREDIT_LIMIT)}</td>
+                    <td><a href="?discountCode=${virge:html(customer.DISCOUNT_CODE)}">${virge:html(customer.DISCOUNT_CODE)}</a></td>
                 </tr>
             </virge:iterate>
             </tbody>
@@ -110,15 +110,15 @@
             <tbody>
             <virge:iterate var="customer" items="${customers}">
                 <tr>
-                    <td>${customer.CUSTOMER_ID}</td>
-                    <td>${customer.NAME}</td>
-                    <td>${customer.ADDRESSLINE1}</td>
-                    <td>${customer.ADDRESSLINE2}</td>
-                    <td>${customer.CITY}</td>
-                    <td><a href="?state=${customer.STATE}">${customer.STATE}</a></td>
-                    <td><a href="?zipcode=${customer.ZIP}">${customer.ZIP}</a></td>
-                    <td>${customer.CREDIT_LIMIT}</td>
-                    <td><a href="?discountCode=${customer.DISCOUNT_CODE}">${customer.DISCOUNT_CODE}</a></td>
+                    <td>${virge:html(customer.CUSTOMER_ID)}</td>
+                    <td>${virge:html(customer.NAME)}</td>
+                    <td>${virge:html(customer.ADDRESSLINE1)}</td>
+                    <td>${virge:html(customer.ADDRESSLINE2)}</td>
+                    <td>${virge:html(customer.CITY)}</td>
+                    <td><a href="?state=${virge:html(customer.STATE)}">${virge:html(customer.STATE)}</a></td>
+                    <td><a href="?zipcode=${virge:html(customer.ZIP)}">${virge:html(customer.ZIP)}</a></td>
+                    <td>${virge:html(customer.CREDIT_LIMIT)}</td>
+                    <td><a href="?discountCode=${virge:html(customer.DISCOUNT_CODE)}">${virge:html(customer.DISCOUNT_CODE)}</a></td>
                 </tr>
             </virge:iterate>
             </tbody>
