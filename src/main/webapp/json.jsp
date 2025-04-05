@@ -59,7 +59,7 @@
 ]
 <span class="tag">&lt;</span>/<span class="name">virge:json</span><span class="tag">&gt;</span>
 
-<span class="tag">&lt;</span><span class="name">virge:iterate</span> <span class="key">var<span class="tag">=</span>"item"</span> <span class="key">items</span><span class="tag">=</span><span class="value">"&dollar;{list}"</span> <span class="key">status</span><span class="tag">=</span><span class="value">"loop"</span><span class="tag">&gt;</span>
+<span class="tag">&lt;</span><span class="name">virge:iterate</span> <span class="key">var<span class="tag">=</span><span class="value">"item"</span> <span class="key">items</span><span class="tag">=</span><span class="value">"<span class="el">&dollar;{list}</span>"</span> <span class="key">status</span><span class="tag">=</span><span class="value">"loop"</span><span class="tag">&gt;</span>
     <span class="html">&lt;tr&gt;</span>
         <span class="html">&lt;td&gt;</span><span class="el">&dollar;{item.title}</span><span class="html">&lt;/td&gt;</span>
         <span class="html">&lt;td&gt;</span><span class="el">&dollar;{item.key}</span><span class="html">&lt;/td&gt;</span>
