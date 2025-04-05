@@ -40,7 +40,11 @@
             </virge:iterate>
             </tbody>
         </table>
+        
+        
         <hr>
+        
+        
         <p>
             This example demonstrates inline JSON being used to render a table. The
             contents of the loop <code>status</code> variable are demonstrated in the 
