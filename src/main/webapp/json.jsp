@@ -5,7 +5,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Inline JSON - JSP Example</title>
         <link href="css/example.css" rel="stylesheet">
     </head>
     <body>
@@ -44,10 +44,12 @@
         <p>
             This example demonstrates inline JSON being used to render a table. The
             contents of the loop <code>status</code> variable are demonstrated in the 
-            "Status" column.
+            <i>Status</i> column.
         </p>
         <p>
             <code>
+<span class="tag">&lt;%@</span><span class="name">taglib</span> <span class="key">uri</span><span class="tag">=</span><span class="value">"convirgance:web"</span> <span class="key">prefix</span><span class="tag">=</span><span class="value">"virge"</span><span class="tag"> %&gt;</span>
+
 <span class="tag">&lt;</span><span class="name">virge:json</span> <span class="key">var</span><span class="tag">=</span><span class="value">"list"</span> <span class="key">scope</span><span class="tag">=</span><span class="value">"page"</span><span class="tag">&gt;</span>
 [
     { "title": "First Name", "key": "firstName" },
@@ -56,10 +58,7 @@
     { "title": "City", "key": "city"}
 ]
 <span class="tag">&lt;</span>/<span class="name">virge:json</span><span class="tag">&gt;</span>
-            </code>
-        </p>
-        <p>
-            <code>
+
 <span class="tag">&lt;</span><span class="name">virge:iterate</span> <span class="key">var<span class="tag">=</span>"item"</span> <span class="key">items</span><span class="tag">=</span><span class="value">"&dollar;{list}"</span> <span class="key">status</span><span class="tag">=</span><span class="value">"loop"</span><span class="tag">&gt;</span>
     <span class="html">&lt;tr&gt;</span>
         <span class="html">&lt;td&gt;</span><span class="el">&dollar;{item.title}</span><span class="html">&lt;/td&gt;</span>

@@ -60,6 +60,7 @@ hr {
 }
 
 code {
+    color: black;
     font-size: 12pt;
     font-weight: 500;
     white-space: pre;
