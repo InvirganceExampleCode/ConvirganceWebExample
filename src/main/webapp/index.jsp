@@ -67,13 +67,30 @@
                 <tr>
                     <th>Example</th>
                     <th>Description</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
-                <tr><td><a href="customers/database">/customers/database</a></td><td>Demonstrates a simple yet sophisticated web service which lists and filters customer data from a database table</td></tr>
-                <tr><td><a href="customers/classpath">/customers/classpath</a></td><td>Shows that data can be pulled from a project file in the classpath with <a target="_blank" href="https://docs.invirgance.com/javadocs/convirgance/latest/com/invirgance/convirgance/transform/filter/package-summary.html">Filter</a> transformations applied</td></tr>
-                <tr><td><a href="customers/filesystem">/customers/filesystem</a></td><td>Data retrieved from a file in the filesystem. System property <code>database.root</code> must be set for the service to find the data.</td></tr>
-                <tr><td><a href="servlet/database">/servlet/database</a></td><td>Same database query as <code>/customers/database</code> but running as a regular servlet using base Convirgance library</td></tr>
+                <tr>
+                    <td><a href="customers/database">/customers/database</a></td>
+                    <td>Demonstrates a simple yet sophisticated web service which lists and filters customer data from a database table</td>
+                    <td><a target="_blank" href="https://github.com/InvirganceExampleCode/ConvirganceWebExample/blob/main/src/main/webapp/customers/database.xml"></a></td>
+                </tr>
+                <tr>
+                    <td><a href="customers/classpath">/customers/classpath</a></td>
+                    <td>Shows that data can be pulled from a project file in the classpath with <a target="_blank" href="https://docs.invirgance.com/javadocs/convirgance/latest/com/invirgance/convirgance/transform/filter/package-summary.html">Filter</a> transformations applied</td>
+                    <td><a target="_blank" href="https://github.com/InvirganceExampleCode/ConvirganceWebExample/blob/main/src/main/webapp/customers/classpath.xml"></a></td>
+                </tr>
+                <tr>
+                    <td><a href="customers/filesystem">/customers/filesystem</a></td>
+                    <td>Data retrieved from a file in the filesystem. System property <code>database.root</code> must be set for the service to find the data.</td>
+                    <td><a target="_blank" href="https://github.com/InvirganceExampleCode/ConvirganceWebExample/blob/main/src/main/webapp/customers/filesystem.xml"></a></td>
+                </tr>
+                <tr>
+                    <td><a href="servlet/database">/servlet/database</a></td>
+                    <td>Same database query as <code>/customers/database</code> but running as a regular servlet using base Convirgance library</td>
+                    <td><a target="_blank" href="https://github.com/InvirganceExampleCode/ConvirganceWebExample/blob/main/src/main/java/CustomersByZipCode.java"></a></td>
+                </tr>
             </tbody>
         </table>
         
