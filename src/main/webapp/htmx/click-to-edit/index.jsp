@@ -1,9 +1,16 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib uri="convirgance:web" prefix="virge" %>
 <jsp:include page="../include/header.jsp" />
 <div style="max-width: 640px; margin: auto;">
     <h1>Click to Edit</h1>
 
     <div>
+        <!-- Initialize state / Resets on full page reset -->
+        <virge:object var="contact" scope="session">
+            <virge:key name="firstName" value="Joe" />
+            <virge:key name="lastName" value="Blow" />
+            <virge:key name="email" value="joe@blow.com" />
+        </virge:object>
         <jsp:include page="contact.jsp" />
     </div>
     
