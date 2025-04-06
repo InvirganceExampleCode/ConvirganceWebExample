@@ -91,6 +91,10 @@ button.btn.primary:active {
   transform: scale(0.98);
 }
 
+table + input {
+    margin-top: 16px;
+}
+
 div[hx-target="this"] {
   background-color: #fefefe;
   border: 1px solid #e9e9e9;
