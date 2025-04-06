@@ -29,7 +29,7 @@
 </span><span>    &lt;</span><span style="color:#e06c75;">button </span><span style="color:#d19a66;">class</span><span>=</span><span style="color:#98c379;">'btn primary' </span><span style="color:#d19a66;">hx-get</span><span>=</span><span style="color:#98c379;">"rows.jsp?page=2"
 </span><span>                        </span><span style="color:#d19a66;">hx-target</span><span>=</span><span style="color:#98c379;">"#replaceMe"
 </span><span>                        </span><span style="color:#d19a66;">hx-swap</span><span>=</span><span style="color:#98c379;">"outerHTML"</span><span>&gt;
-</span><span>         Load More Agents... &lt;</span><span style="color:#e06c75;">img </span><span style="color:#d19a66;">class</span><span>=</span><span style="color:#98c379;">"htmx-indicator" </span><span style="color:#d19a66;">src</span><span>=</span><span style="color:#98c379;">"/img/bars.svg"</span><span>&gt;
+</span><span>         Load More Agents... &lt;</span><span style="color:#e06c75;">img </span><span style="color:#d19a66;">class</span><span>=</span><span style="color:#98c379;">"htmx-indicator" </span><span style="color:#d19a66;">src</span><span>=</span><span style="color:#98c379;">"images/bars.svg"</span><span>&gt;
 </span><span>    &lt;/</span><span style="color:#e06c75;">button</span><span>&gt;
 </span><span>  &lt;/</span><span style="color:#e06c75;">td</span><span>&gt;
 </span><span>&lt;/</span><span style="color:#e06c75;">tr</span><span>&gt;
