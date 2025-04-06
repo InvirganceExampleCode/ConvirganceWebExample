@@ -35,6 +35,18 @@
                 padding: 2px 5px;
                 font-size: 95%;
             }
+            
+            tr td:nth-child(3) {
+                text-align: right;
+            }
+            
+            tr td:nth-child(3) a {
+                background-image: url(images/github.png);
+                background-size: 24px;
+                display: inline-block;
+                width: 24px;
+                height: 24px;
+            }
         </style>
     </head>
     <body>
@@ -88,13 +100,30 @@
                 <tr>
                     <th>Example</th>
                     <th>Description</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
-                <tr><td><a href="json.jsp">json.jsp</a></td><td>Example showing how a JSON structure can be used to drive page rendering</td></tr>
-                <tr><td><a href="database.jsp">database.jsp</a></td><td>Embeds a SQL Query directly into the JSP page and then renders the results</td></tr>
-                <tr><td><a href="service.jsp">service.jsp</a></td><td>Calls a Convirgance Web Service and renders the results to the page</td></tr>
-                <tr><td><a href="htmx/">&lt;/&gt;htmx</a></td><td>Demos showing how to utilize htmx technology with Convirgance (Web Services)</td></tr>
+                <tr>
+                    <td><a href="json.jsp">json.jsp</a></td>
+                    <td>Example showing how a JSON structure can be used to drive page rendering</td>
+                    <td><a target="_blank" href="https://github.com/InvirganceExampleCode/ConvirganceWebExample/blob/main/src/main/webapp/json.jsp"></a></td>
+                </tr>
+                <tr>
+                    <td><a href="database.jsp">database.jsp</a></td>
+                    <td>Embeds a SQL Query directly into the JSP page and then renders the results</td>
+                    <td><a target="_blank" href="https://github.com/InvirganceExampleCode/ConvirganceWebExample/blob/main/src/main/webapp/database.jsp"></a></td>
+                </tr>
+                <tr>
+                    <td><a href="service.jsp">service.jsp</a></td>
+                    <td>Calls a Convirgance Web Service and renders the results to the page</td>
+                    <td><a target="_blank" href="https://github.com/InvirganceExampleCode/ConvirganceWebExample/blob/main/src/main/webapp/service.jsp"></a></td>
+                </tr>
+                <tr>
+                    <td><a href="htmx/">&lt;/&gt;htmx</a></td>
+                    <td>Demos showing how to utilize htmx technology with Convirgance (Web Services)</td>
+                    <td><a target="_blank" href="https://github.com/InvirganceExampleCode/ConvirganceWebExample/blob/main/src/main/webapp/htmx/"></a></td>
+                </tr>
             </tbody>
         </table>
     </body>
