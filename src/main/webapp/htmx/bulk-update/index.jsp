@@ -33,7 +33,7 @@
         accomplished by putting a form around a table, with checkboxes in the table, and then including the checked
         values in the form submission (<code>POST</code> request):</p>
     <pre data-lang="html" style="background-color:#1f2329;color:#abb2bf;" class="language-html "><code class="language-html" data-lang="html"><span>&lt;</span><span style="color:#e06c75;">form </span><span style="color:#d19a66;">id</span><span>=</span><span style="color:#98c379;">"checked-contacts"
-</span><span>      </span><span style="color:#d19a66;">hx-post</span><span>=</span><span style="color:#98c379;">"/users"
+</span><span>      </span><span style="color:#d19a66;">hx-post</span><span>=</span><span style="color:#98c379;">"users.jsp"
 </span><span>      </span><span style="color:#d19a66;">hx-swap</span><span>=</span><span style="color:#98c379;">"innerHTML settle:3s"
 </span><span>      </span><span style="color:#d19a66;">hx-target</span><span>=</span><span style="color:#98c379;">"#toast"</span><span>&gt;
 </span><span>    &lt;</span><span style="color:#e06c75;">table</span><span>&gt;

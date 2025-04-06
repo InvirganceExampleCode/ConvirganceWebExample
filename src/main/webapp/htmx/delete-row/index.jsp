@@ -45,7 +45,7 @@
 </span><span>}
 </span></code></pre>
     <p>To fade the row out before it is swapped/removed.</p>
-    <p>Each row has a button with a <a href="https://htmx.org/attributes/hx-delete/"><code>hx-delete</code></a> attribute containing the url on which to issue a <code>DELETE</code>
+    <p>Each row has a button with a <a href="https://htmx.org/attributes/hx-post/"><code>hx-post</code></a> attribute containing the url on which to issue a <code>POST</code>
         request to delete the row from the server. This request responds with a <code>200</code> status code and empty content, indicating that the
         row should be replaced with nothing.</p>
     <pre data-lang="html" style="background-color:#1f2329;color:#abb2bf;" class="language-html "><code class="language-html" data-lang="html"><span>&lt;</span><span style="color:#e06c75;">tr</span><span>&gt;
@@ -53,7 +53,7 @@
 </span><span>  &lt;</span><span style="color:#e06c75;">td</span><span>&gt;angie@macdowell.org&lt;/</span><span style="color:#e06c75;">td</span><span>&gt;
 </span><span>  &lt;</span><span style="color:#e06c75;">td</span><span>&gt;Active&lt;/</span><span style="color:#e06c75;">td</span><span>&gt;
 </span><span>  &lt;</span><span style="color:#e06c75;">td</span><span>&gt;
-</span><span>    &lt;</span><span style="color:#e06c75;">button </span><span style="color:#d19a66;">class</span><span>=</span><span style="color:#98c379;">"btn danger" </span><span style="color:#d19a66;">hx-delete</span><span>=</span><span style="color:#98c379;">"/contact/1"</span><span>&gt;
+</span><span>    &lt;</span><span style="color:#e06c75;">button </span><span style="color:#d19a66;">class</span><span>=</span><span style="color:#98c379;">"btn danger" </span><span style="color:#d19a66;">hx-post</span><span>=</span><span style="color:#98c379;">"delete.jsp?id=1"</span><span>&gt;
 </span><span>      Delete
 </span><span>    &lt;/</span><span style="color:#e06c75;">button</span><span>&gt;
 </span><span>  &lt;/</span><span style="color:#e06c75;">td</span><span>&gt;

@@ -21,12 +21,12 @@
             </table>
         </div>
     </div>
-    
+    <br
     <p>This example shows how to implement click-to-load the next page in a table of data.  The crux of the demo is
         the final row:</p>
     <pre data-lang="html" style="background-color:#1f2329;color:#abb2bf;" class="language-html "><code class="language-html" data-lang="html"><span>&lt;</span><span style="color:#e06c75;">tr </span><span style="color:#d19a66;">id</span><span>=</span><span style="color:#98c379;">"replaceMe"</span><span>&gt;
 </span><span>  &lt;</span><span style="color:#e06c75;">td </span><span style="color:#d19a66;">colspan</span><span>=</span><span style="color:#98c379;">"3"</span><span>&gt;
-</span><span>    &lt;</span><span style="color:#e06c75;">button </span><span style="color:#d19a66;">class</span><span>=</span><span style="color:#98c379;">'btn primary' </span><span style="color:#d19a66;">hx-get</span><span>=</span><span style="color:#98c379;">"/contacts/?page=2"
+</span><span>    &lt;</span><span style="color:#e06c75;">button </span><span style="color:#d19a66;">class</span><span>=</span><span style="color:#98c379;">'btn primary' </span><span style="color:#d19a66;">hx-get</span><span>=</span><span style="color:#98c379;">"rows.jsp?page=2"
 </span><span>                        </span><span style="color:#d19a66;">hx-target</span><span>=</span><span style="color:#98c379;">"#replaceMe"
 </span><span>                        </span><span style="color:#d19a66;">hx-swap</span><span>=</span><span style="color:#98c379;">"outerHTML"</span><span>&gt;
 </span><span>         Load More Agents... &lt;</span><span style="color:#e06c75;">img </span><span style="color:#d19a66;">class</span><span>=</span><span style="color:#98c379;">"htmx-indicator" </span><span style="color:#d19a66;">src</span><span>=</span><span style="color:#98c379;">"/img/bars.svg"</span><span>&gt;
