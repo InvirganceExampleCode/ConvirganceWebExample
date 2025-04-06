@@ -9,7 +9,7 @@
     
     <p>The click to edit pattern provides a way to offer inline editing of all or part of a record without a page refresh.</p>
     <ul>
-        <li>This pattern starts with a UI that shows the details of a contact.  The div has a button that will get the editing UI for the contact from <code>edit.jsp</code></li>
+        <li>This pattern starts with a UI in <code>contact.jsp</code> that shows the details of a contact.  The div has a button that will get the editing UI for the contact from <code>edit.jsp</code></li>
     </ul>
     <pre data-lang="html" style="background-color:#1f2329;color:#abb2bf;" class="language-html "><code class="language-html" data-lang="html"><span>&lt;</span><span style="color:#e06c75;">div </span><span style="color:#d19a66;">hx-target</span><span>=</span><span style="color:#98c379;">"this" </span><span style="color:#d19a66;">hx-swap</span><span>=</span><span style="color:#98c379;">"outerHTML"</span><span>&gt;
 </span><span>    &lt;</span><span style="color:#e06c75;">div</span><span>&gt;&lt;</span><span style="color:#e06c75;">label</span><span>&gt;First Name&lt;/</span><span style="color:#e06c75;">label</span><span>&gt;: Joe&lt;/</span><span style="color:#e06c75;">div</span><span>&gt;
@@ -41,7 +41,9 @@
 </span><span>&lt;/</span><span style="color:#e06c75;">form</span><span>&gt;
 </span></code></pre>
     <ul>
-        <li>The form issues a <code>POST</code> back to <code>save.jsp</code>, which then redirects back to <code>contact.jsp</code> to display the data.</li>
+        <li>The form issues a <code>POST</code> back to <code>save.jsp</code>, which acts as a stand-in for a database
+            update service. The page instead stores the values into a <code>session</code> object before 
+            redirecting back to <code>contact.jsp</code> to display the data.</li>
     </ul>
 </div>
 <jsp:include page="../include/footer.jsp" />
