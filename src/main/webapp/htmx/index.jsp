@@ -1,12 +1,13 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <jsp:include page="include/header.jsp" />
-<h1>HTMx Examples</h1>
+<h1><span class="htmx-logo">&lt;<b>/</b>&gt;htm<b>x</b></span> Examples</h1>
 
+<h2>Ported Examples</h2>
 <p>
-    Below are a set of UX patterns implemented in htmx with minimal HTML and styling.
-</p>
-<p>
-    You can copy and paste them and then adjust them for your needs.
+    These examples are ported from the official htmx website with only minor changes
+    to make them compatible with JSP pages. These pages show how easy it is to use
+    the Convirgance (Web Services) taglib to render the server-side pages for htmx 
+    applications.
 </p>
 <table>
     <thead>
@@ -20,8 +21,8 @@
         <tr><td><a href="bulk-update/">Bulk Update</a></td><td>Demonstrates bulk updating of multiple rows of data</td></tr>
         <tr><td><a href="click-to-load/">Click To Load</a></td><td>Demonstrates clicking to load more rows in a table</td></tr>
         <tr><td><a href="delete-row/">Delete Row</a></td><td>Demonstrates row deletion in a table</td></tr>
-<!--        <tr><td><a href="edit-row/">Edit Row</a></td><td>Demonstrates how to edit rows in a table</td></tr>
-        <tr><td><a href="lazy-load/">Lazy Loading</a></td><td>Demonstrates how to lazy load content</td></tr>
+        <tr><td><a href="edit-row/">Edit Row</a></td><td>Demonstrates how to edit rows in a table</td></tr>
+<!--        <tr><td><a href="lazy-load/">Lazy Loading</a></td><td>Demonstrates how to lazy load content</td></tr>
         <tr><td><a href="inline-validation/">Inline Validation</a></td><td>Demonstrates how to do inline field validation</td></tr>
         <tr><td><a href="infinite-scroll/">Infinite Scroll</a></td><td>Demonstrates infinite scrolling of a page</td></tr>
         <tr><td><a href="active-search/">Active Search</a></td><td>Demonstrates the active search box pattern</td></tr>

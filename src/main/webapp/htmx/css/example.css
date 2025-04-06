@@ -5,6 +5,14 @@ body {
   padding: 40px;
 }
 
+.htmx-logo {
+  font-size: 110%;
+}
+
+.htmx-logo b {
+  color: rgb(51, 102, 204);
+}
+
 h1 {
   color: #2b3138;
   font-size: 28px;
