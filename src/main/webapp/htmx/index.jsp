@@ -2,6 +2,25 @@
 <jsp:include page="include/header.jsp" />
 <h1><span class="htmx-logo">&lt;<b>/</b>&gt;htm<b>x</b></span> Examples</h1>
 
+<h2>Convirgance Examples</h2>
+<p>
+    These examples are ported from the official htmx website with only minor changes
+    to make them compatible with JSP pages. These pages show how easy it is to use
+    the Convirgance (Web Services) taglib to render the server-side pages for htmx 
+    applications.
+</p>
+<table>
+    <thead>
+        <tr>
+            <th>Pattern</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr><td><a href="tabbed-customers/">Tabbed Customers</a></td><td>Demonstrates a highly dynamic interface showing the same data coming from data sources</td></tr>
+    </tbody>
+</table>
+
 <h2>Ported Examples</h2>
 <p>
     These examples are ported from the official htmx website with only minor changes
