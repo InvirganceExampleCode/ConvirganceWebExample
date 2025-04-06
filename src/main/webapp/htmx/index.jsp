@@ -18,8 +18,8 @@
     <tbody>
         <tr><td><a href="click-to-edit/">Click To Edit</a></td><td>Demonstrates inline editing of a data object</td></tr>
         <tr><td><a href="bulk-update/">Bulk Update</a></td><td>Demonstrates bulk updating of multiple rows of data</td></tr>
-<!--        <tr><td><a href="click-to-load/">Click To Load</a></td><td>Demonstrates clicking to load more rows in a table</td></tr>
-        <tr><td><a href="delete-row/">Delete Row</a></td><td>Demonstrates row deletion in a table</td></tr>
+        <tr><td><a href="click-to-load/">Click To Load</a></td><td>Demonstrates clicking to load more rows in a table</td></tr>
+<!--        <tr><td><a href="delete-row/">Delete Row</a></td><td>Demonstrates row deletion in a table</td></tr>
         <tr><td><a href="edit-row/">Edit Row</a></td><td>Demonstrates how to edit rows in a table</td></tr>
         <tr><td><a href="lazy-load/">Lazy Loading</a></td><td>Demonstrates how to lazy load content</td></tr>
         <tr><td><a href="inline-validation/">Inline Validation</a></td><td>Demonstrates how to do inline field validation</td></tr>
