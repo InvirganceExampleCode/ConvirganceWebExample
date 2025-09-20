@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-
 <SelectService>
     <parameters>
         <list>
@@ -28,81 +27,81 @@
     </binding>
     <transformers>
         <list>
-            <object class="com.invirgance.convirgance.transform.filter.AndFilter">
+            <AndFilter>
                 <filters>
                     <list>
-                        <object class="com.invirgance.convirgance.transform.filter.OrFilter">
+                        <OrFilter>
                             <filters>
                                 <list>
-                                    <!-- This filter makes all values return if discountCode is not set-->
-                                    <BindingFilter>
+                                    <!-- This filter makes all values return if zipcode is not set-->
+                                    <ParameterFilter>
                                         <filter>
-                                            <object class="com.invirgance.convirgance.transform.filter.EqualsFilter">
+                                            <EqualsFilter>
                                                 <key>zipcode</key>
                                                 <value></value>
-                                            </object>
+                                            </EqualsFilter>
                                         </filter>
-                                    </BindingFilter>
-                                    <object class="com.invirgance.convirgance.transform.filter.EqualsFilter">
+                                    </ParameterFilter>
+                                    <EqualsFilter>
                                         <key>ZIP</key>
                                         <value>
-                                            <BindingParameter>
-                                                <key>zipcode</key>
-                                            </BindingParameter>
+                                            <ParameterValueGenerator>
+                                                <name>zipcode</name>
+                                            </ParameterValueGenerator>
                                         </value>
-                                    </object>
+                                    </EqualsFilter>
                                 </list>
                             </filters>
-                        </object>
-                        <object class="com.invirgance.convirgance.transform.filter.OrFilter">
+                        </OrFilter>
+                        <OrFilter>
                             <filters>
                                 <list>
-                                    <!-- This filter makes all values return if discountCode is not set-->
-                                    <BindingFilter>
+                                    <!-- This filter makes all values return if state is not set-->
+                                    <ParameterFilter>
                                         <filter>
-                                            <object class="com.invirgance.convirgance.transform.filter.EqualsFilter">
+                                            <EqualsFilter>
                                                 <key>state</key>
                                                 <value></value>
-                                            </object>
+                                            </EqualsFilter>
                                         </filter>
-                                    </BindingFilter>
-                                    <object class="com.invirgance.convirgance.transform.filter.EqualsFilter">
+                                    </ParameterFilter>
+                                    <EqualsFilter>
                                         <key>STATE</key>
                                         <value>
-                                            <BindingParameter>
-                                                <key>state</key>
-                                            </BindingParameter>
+                                            <ParameterValueGenerator>
+                                                <name>state</name>
+                                            </ParameterValueGenerator>
                                         </value>
-                                    </object>
+                                    </EqualsFilter>
                                 </list>
                             </filters>
-                        </object>
-                        <object class="com.invirgance.convirgance.transform.filter.OrFilter">
+                        </OrFilter>
+                        <OrFilter>
                             <filters>
                                 <list>
                                     <!-- This filter makes all values return if discountCode is not set-->
-                                    <BindingFilter>
+                                    <ParameterFilter>
                                         <filter>
-                                            <object class="com.invirgance.convirgance.transform.filter.EqualsFilter">
+                                            <EqualsFilter>
                                                 <key>discountCode</key>
                                                 <value></value>
-                                            </object>
+                                            </EqualsFilter>
                                         </filter>
-                                    </BindingFilter>
-                                    <object class="com.invirgance.convirgance.transform.filter.EqualsFilter">
+                                    </ParameterFilter>
+                                    <EqualsFilter>
                                         <key>DISCOUNT_CODE</key>
                                         <value>
-                                            <BindingParameter>
-                                                <key>discountCode</key>
-                                            </BindingParameter>
+                                            <ParameterValueGenerator>
+                                                <name>discountCode</name>
+                                            </ParameterValueGenerator>
                                         </value>
-                                    </object>
+                                    </EqualsFilter>
                                 </list>
                             </filters>
-                        </object>
+                        </OrFilter>
                     </list>
                 </filters>
-            </object>
+            </AndFilter>
         </list>
     </transformers>
     <output>
