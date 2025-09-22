@@ -111,7 +111,7 @@
         </table>
         
         <h2>JSP Demos</h2>
-                <table>
+        <table>
             <thead>
                 <tr>
                     <th>Example</th>
@@ -149,12 +149,25 @@
                 <tr>
                     <th>Example</th>
                     <th>Description</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
-                <tr><td><a href="customers/zipcode/48128">/customers/customers/zipcode/48128</a></td><td>Demonstrates using <code>PathVariable</code> for REST interfaces.</td></tr>
-                <tr><td><a href="customers/view/zipcode/48128">/customers/view/zipcode/48128</a></td><td>Renders an HTML page using the <code>HypermediaService</code> to provide REST pathing</td></tr>
-                <tr><td><a href="customers/rest">/customers/rest</a></td><td>Executes a different service depending on the HTTP Method. Clicking the link will show a <code>GET</code> request.</td></tr>
+                <tr>
+                    <td><a href="customers/zipcode/48128">/customers/customers/zipcode/48128</a></td>
+                    <td>Demonstrates using <code>PathVariable</code> for REST interfaces.</td>
+                    <td><a target="_blank" href="https://github.com/InvirganceExampleCode/ConvirganceWebExample/blob/main/src/main/webapp/customers/zipcode.xml"></a></td>
+                </tr>
+                <tr>
+                    <td><a href="customers/view/zipcode/48128">/customers/view/zipcode/48128</a></td>
+                    <td>Renders an HTML page using the <code>HypermediaService</code> to provide REST pathing</td>
+                    <td><a target="_blank" href="https://github.com/InvirganceExampleCode/ConvirganceWebExample/blob/main/src/main/webapp/customers/view.xml"></a></td>
+                </tr>
+                <tr>
+                    <td><a href="customers/rest">/customers/rest</a></td>
+                    <td>Executes a different service depending on the HTTP Method. Clicking the link will show a <code>GET</code> request.</td>
+                    <td><a target="_blank" href="https://github.com/InvirganceExampleCode/ConvirganceWebExample/blob/main/src/main/webapp/customers/rest.xml"></a></td>
+                </tr>
             </tbody>
         </table>
     </body>
