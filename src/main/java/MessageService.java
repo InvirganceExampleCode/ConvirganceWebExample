@@ -30,6 +30,11 @@ import java.io.IOException;
  * THE SOFTWARE.
  */
 
+/**
+ * Dummy service for making demos easy to understand. Prints out a configured message.
+ * 
+ * @author jbanes
+ */
 @Wiring
 public class MessageService implements Service
 {

@@ -110,6 +110,39 @@
             </tbody>
         </table>
         
+        <h3>REST and Hypermedia Web Services</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Example</th>
+                    <th>Description</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="customers/zipcode/48128">/customers/customers/zipcode/48128</a></td>
+                    <td>Demonstrates using <code>PathVariable</code> for REST interfaces.</td>
+                    <td><a target="_blank" href="https://github.com/InvirganceExampleCode/ConvirganceWebExample/blob/main/src/main/webapp/customers/zipcode.xml"></a></td>
+                </tr>
+                <tr>
+                    <td><a href="customers/view/zipcode/48128">/customers/view/zipcode/48128</a></td>
+                    <td>Renders an HTML page using the <code>HypermediaService</code> to provide REST pathing</td>
+                    <td><a target="_blank" href="https://github.com/InvirganceExampleCode/ConvirganceWebExample/blob/main/src/main/webapp/customers/view.xml"></a></td>
+                </tr>
+                <tr>
+                    <td><a href="customers/rest">/customers/rest</a></td>
+                    <td>Executes a different service depending on the HTTP Method. Clicking the link will show a <code>GET</code> request.</td>
+                    <td><a target="_blank" href="https://github.com/InvirganceExampleCode/ConvirganceWebExample/blob/main/src/main/webapp/customers/rest.xml"></a></td>
+                </tr>
+                <tr>
+                    <td><a href="customers/routed">/customers/routed</a></td>
+                    <td>Executes a different service depending on the path. Routes can be combined with other types of services to handle complex hierarchies of REST requests.</td>
+                    <td><a target="_blank" href="https://github.com/InvirganceExampleCode/ConvirganceWebExample/blob/main/src/main/webapp/customers/routed.xml"></a></td>
+                </tr>
+            </tbody>
+        </table>
+        
         <h2>JSP Demos</h2>
         <table>
             <thead>
@@ -139,34 +172,6 @@
                     <td><a href="htmx/"><span style="color: black; font-weight: 600;">&lt;<span style="color: rgb(51, 102, 204); font-weight: bold;">/</span>&gt;htm<span style="color: rgb(51, 102, 204); font-weight: bold;">x</span></span></a></td>
                     <td>Demos showing how to utilize htmx technology with Convirgance (Web Services)</td>
                     <td><a target="_blank" href="https://github.com/InvirganceExampleCode/ConvirganceWebExample/blob/main/src/main/webapp/htmx/"></a></td>
-                </tr>
-            </tbody>
-        </table>
-        
-        <h3>REST and Hypermedia Web Services</h3>
-        <table>
-            <thead>
-                <tr>
-                    <th>Example</th>
-                    <th>Description</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><a href="customers/zipcode/48128">/customers/customers/zipcode/48128</a></td>
-                    <td>Demonstrates using <code>PathVariable</code> for REST interfaces.</td>
-                    <td><a target="_blank" href="https://github.com/InvirganceExampleCode/ConvirganceWebExample/blob/main/src/main/webapp/customers/zipcode.xml"></a></td>
-                </tr>
-                <tr>
-                    <td><a href="customers/view/zipcode/48128">/customers/view/zipcode/48128</a></td>
-                    <td>Renders an HTML page using the <code>HypermediaService</code> to provide REST pathing</td>
-                    <td><a target="_blank" href="https://github.com/InvirganceExampleCode/ConvirganceWebExample/blob/main/src/main/webapp/customers/view.xml"></a></td>
-                </tr>
-                <tr>
-                    <td><a href="customers/rest">/customers/rest</a></td>
-                    <td>Executes a different service depending on the HTTP Method. Clicking the link will show a <code>GET</code> request.</td>
-                    <td><a target="_blank" href="https://github.com/InvirganceExampleCode/ConvirganceWebExample/blob/main/src/main/webapp/customers/rest.xml"></a></td>
                 </tr>
             </tbody>
         </table>

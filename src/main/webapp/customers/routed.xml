@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<RoutedService>
+    <routes>
+        <map>
+            <entry>
+                <string>/customers/*</string> <!-- Handles any path not handled by the other path entries -->
+                <MessageService>
+                    <message>
+This is the default response. Try changing the path in the browser for some additional responses:
+
+    /customers/routed/hello
+    /customers/routed/hello/charlie
+    /customers/routed/goodbye
+                    </message>
+                </MessageService>
+            </entry>
+            <entry>
+                <string>/customers/routed/hello</string>
+                <MessageService>
+                    <message>Hello world!</message>
+                </MessageService>
+            </entry>
+            <entry>
+                <string>/customers/routed/hello/charlie</string>
+                <MessageService>
+                    <message>Hello charlie!</message>
+                </MessageService>
+            </entry>
+            <entry>
+                <string>/customers/routed/goodbye</string>
+                <MessageService>
+                    <message>Goodbye cruel world!</message>
+                </MessageService>
+            </entry>
+        </map>
+    </routes>
+</RoutedService>
+
