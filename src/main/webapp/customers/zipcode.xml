@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<SelectService>
+    <parameters>
+        <list>
+            <PathVariable>
+                <path>/customers/zipcode/{zipcode}</path>
+            </PathVariable>
+        </list>
+    </parameters>
+    <binding>
+        <QueryBinding>
+            <jndiName>jdbc/sample</jndiName>
+            <sql>
+                <![CDATA[
+                    select * from APP.CUSTOMER
+                    where (:zipcode = 'all' or ZIP = :zipcode)
+                ]]>
+            </sql>
+        </QueryBinding>
+    </binding>
+    <output>
+        <JSONOutput />
+    </output>
+</SelectService>

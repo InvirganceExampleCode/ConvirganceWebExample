@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<RESTService>
+    <GET>
+        <MessageService>
+            <message>You have made a GET request. Try running cURL on the command line to get a POST request: 
+
+    curl -X POST https:/examples.convirgance.com/customers/rest</message>
+        </MessageService>
+    </GET>
+    <POST>
+        <MessageService>
+            <message>You have made a POST request. If this were an actual service, this would insert a new record.</message>
+        </MessageService>
+    </POST>
+    <PUT>
+        <MessageService>
+            <message>You have made a PUT request. If this were an actual service, you would have updated a record.</message>
+        </MessageService>
+    </PUT>
+    <DELETE>
+        <MessageService>
+            <message>You have made a DELETE request. If this were an actual service, you would have deleted a record.</message>
+        </MessageService>
+    </DELETE>
+</RESTService>
+

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<HypermediaService>
+    <parameters>
+        <list>
+            <PathVariable>
+                <path>/customers/view/zipcode/{zipcode}</path>
+            </PathVariable>
+        </list>
+    </parameters>
+    <page>/hypermedia.jsp</page>
+</HypermediaService>
