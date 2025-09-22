@@ -136,14 +136,14 @@
                     <td><a target="_blank" href="https://github.com/InvirganceExampleCode/ConvirganceWebExample/blob/main/src/main/webapp/service.jsp"></a></td>
                 </tr>
                 <tr>
-                    <td><a href="htmx/">&lt;/&gt;htmx</a></td>
+                    <td><a href="htmx/"><span style="color: black; font-weight: 600;">&lt;<span style="color: rgb(51, 102, 204); font-weight: bold;">/</span>&gt;htm<span style="color: rgb(51, 102, 204); font-weight: bold;">x</span></span></a></td>
                     <td>Demos showing how to utilize htmx technology with Convirgance (Web Services)</td>
                     <td><a target="_blank" href="https://github.com/InvirganceExampleCode/ConvirganceWebExample/blob/main/src/main/webapp/htmx/"></a></td>
                 </tr>
             </tbody>
         </table>
         
-        <h3>REST and Hypermdia Web Services</h3>
+        <h3>REST and Hypermedia Web Services</h3>
         <table>
             <thead>
                 <tr>
